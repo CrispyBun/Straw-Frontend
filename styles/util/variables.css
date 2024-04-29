@@ -1,0 +1,16 @@
+:root {
+    /* Colors */
+    --color-background-backmost: #f0f0f0;
+    --color-background: #bebebe;
+    --color-background-frontmost: #dcdcdc;
+    --color-placeholder: #4cbd62;
+
+    /* Sizing */
+    --padding-tiny: 5px;
+    --padding-small: 10px;
+    --gap-small: 20px;
+
+    /* Font sizes */
+    --font-size-title-main: 2em;
+    --font-size-title-small: 1.25em;
+}

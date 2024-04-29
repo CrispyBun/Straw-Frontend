@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="styles/boards.css">
+
+    <template id="board-card-template">
+        <article class="board-card">
+            <section class="header">
+                <div class="icon"></div>
+                <section class="summary">
+                    <h2 class="title">Board Title</h2>
+                    <p class="description">This is the description, which must fit on one line.</p>
+                </section>
+            </section>
+        </article>
+    </template>
+</head>
+<body>
+    <h1>Boards</h1>
+
+    <article class="board-list">
+
+    </article>
+
+    <script src="scripts/apiUrl.js"></script>
+    <script src="scripts/loadBoardList.js"></script>
+</body>
+</html>

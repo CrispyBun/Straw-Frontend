@@ -1,0 +1,17 @@
+@import 'reset.css';
+@import 'fonts.css';
+@import 'variables.css';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-background-backmost);
+    font-family: "DM Sans";
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}

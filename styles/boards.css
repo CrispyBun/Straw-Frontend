@@ -1,0 +1,75 @@
+@import 'util/base.css';
+
+:root {
+    --board-card-icon-size: 80px;
+}
+
+h1 {
+    font-size: var(--font-size-title-main);
+    margin-top: var(--padding-small);
+    margin-bottom: var(--padding-small);
+}
+
+/* Board preview for board lists */
+/* Replace div with img */
+/*
+<article class="board-card">
+    <section class="header">
+        <div class="icon"></div>
+        <section class="summary">
+            <h2 class="title">Board Title</h2>
+            <p class="description">This is the description, which must fit on one line.</p>
+        </section>
+    </section>
+</article>
+*/
+.board-card {
+    border-radius: 2px;
+    overflow: clip;
+    transition: 0.1s;
+}
+.board-card:hover {
+    box-shadow: 0 0 10px 0 #0000003d;
+    cursor: pointer;
+}
+
+.board-card.large-icon {
+    --board-card-icon-size: 120px;
+}
+
+.board-card > .header {
+    display: flex;
+    flex-direction: row;
+}
+.board-card > .header > .icon {
+    background-color: var(--color-placeholder);
+    aspect-ratio: 1/1;
+    width: var(--board-card-icon-size);
+    min-height: var(--board-card-icon-size);
+}
+.board-card > .header > .summary {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.board-card > .header > .summary > .title {
+    background-color: var(--color-background-frontmost);
+    font-size: var(--font-size-title-small);
+    font-weight: 600;
+    padding: var(--padding-small);
+}
+.board-card > .header > .summary > .description {
+    background-color: var(--color-background);
+
+    padding: var(--padding-small);
+    flex-grow: 1;
+}
+
+/* For listing board cards */
+.board-list {
+    width: 500px; /* TODO: Delete width when this gets a container lol */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--gap-small);
+}
