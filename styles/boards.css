@@ -16,9 +16,9 @@ h1 {
 <article class="board-card">
     <section class="header">
         <div class="icon"></div>
-        <section class="summary">
+        <section class="info">
             <h2 class="title">Board Title</h2>
-            <p class="description">This is the description, which must fit on one line.</p>
+            <p class="summary">This is the summary, which must fit on one line.</p>
         </section>
     </section>
 </article>
@@ -47,18 +47,18 @@ h1 {
     width: var(--board-card-icon-size);
     min-height: var(--board-card-icon-size);
 }
-.board-card > .header > .summary {
+.board-card > .header > .info {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
-.board-card > .header > .summary > .title {
+.board-card > .header > .info > .title {
     background-color: var(--color-background-frontmost);
     font-size: var(--font-size-title-small);
     font-weight: 600;
     padding: var(--padding-small);
 }
-.board-card > .header > .summary > .description {
+.board-card > .header > .info > .summary {
     background-color: var(--color-background);
 
     padding: var(--padding-small);
@@ -67,7 +67,7 @@ h1 {
 
 /* For listing board cards */
 .board-list {
-    width: 500px; /* TODO: Delete width when this gets a container lol */
+    width: 400px; /* TODO: Delete width when this gets a container lol */
     display: flex;
     flex-direction: column;
     align-items: stretch;

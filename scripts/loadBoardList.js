@@ -19,7 +19,7 @@ const boardsUrl = apiUrl + "/board?";
     for (board of boardData) {
         const node = boardCardTemplate.content.cloneNode(true);
         node.querySelector(".title").textContent = board.name;
-        // node.querySelector(".description").textContent = board.name;
+        node.querySelector(".summary").textContent = board.summary;
         list.appendChild(node);
     }
 })();
