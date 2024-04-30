@@ -22,9 +22,23 @@ h1 {
         </section>
     </section>
 </article>
+
+<article class="board-card">
+    <section class="header">
+        <div class="icon"></div>
+        <section class="info">
+            <h2 class="title">Board Title</h2>
+            <p class="summary">Short board summary</p>
+        </section>
+    </section>
+    <section class="body">
+        <p>A long description of the board can go here and be displayed below the summary and icon.</p>
+        <p>It can span multiple lines and can use multiple paragraphs.</p>
+    </section>
+</article>
 */
 .board-card {
-    border-radius: 2px;
+    /* border-radius: 2px; */
     overflow: clip;
     transition: 0.1s;
 }
@@ -63,6 +77,18 @@ h1 {
 
     padding: var(--padding-small);
     flex-grow: 1;
+}
+
+.board-card > .body {
+    background-color: var(--color-background);
+    color: var(--color-text-faint);
+    font-style: italic;
+    
+    padding: var(--padding-small);
+
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-tiny);
 }
 
 /* For listing board cards */

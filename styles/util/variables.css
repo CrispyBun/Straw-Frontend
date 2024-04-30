@@ -1,14 +1,16 @@
 :root {
     /* Colors */
     --color-background-backmost: #f0f0f0;
-    --color-background: #bebebe;
+    --color-background: #cacaca;
     --color-background-frontmost: #dcdcdc;
     --color-placeholder: #ad75d3;
     --color-text: #030303;
+    --color-text-faint: #4b4b4b;
 
     /* Sizing */
     --padding-tiny: 5px;
     --padding-small: 10px;
+    --gap-tiny: 10px;
     --gap-small: 20px;
 
     /* Font sizes */

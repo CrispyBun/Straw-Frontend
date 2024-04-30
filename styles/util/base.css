@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+* {
+    overflow-wrap: break-word;
+}
+
 body {
     color: var(--color-text);
     background-color: var(--color-background-backmost);
