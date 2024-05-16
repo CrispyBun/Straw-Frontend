@@ -10,8 +10,8 @@ const boardData = await getBoards(0, 10);
 
 for (const board of boardData) {
     const node = boardCardTemplate.content.cloneNode(true);
-    node.querySelector(".title").textContent = board.name;
-    node.querySelector(".summary").textContent = board.summary;
+    node.querySelector(".header *").textContent = board.name;
+    node.querySelector(".body p").textContent = board.summary;
     list.appendChild(node);
 }
 

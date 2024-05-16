@@ -1,10 +1,10 @@
 :root {
     /* Colors */
     --color-background-backmost: #f0f0f0;
-    --color-background: #cacaca;
-    --color-background-frontmost: #dcdcdc;
-    --color-placeholder: #ad75d3;
-    --color-text: #030303;
+    --color-background: #c9a3d8;
+    --color-background-frontmost: #e1cee6;
+    --color-placeholder: #c375d3;
+    --color-text: #131313;
     --color-text-faint: #4b4b4b;
 
     /* Sizing */
@@ -12,6 +12,7 @@
     --padding-small: 10px;
     --gap-tiny: 10px;
     --gap-small: 20px;
+    --gap-medium: 30px;
 
     /* Font sizes */
     --font-size-title-main: 2em;
