@@ -1,12 +1,12 @@
 :root {
-    --board-card-icon-size: 75px;
-    --board-card-header-height: 40px;
-    --board-card-outline-thickness: 4px;
-    --board-card-border-radius: 10px;
+    --digest-card-icon-size: 75px;
+    --digest-card-header-height: 40px;
+    --digest-card-outline-thickness: 4px;
+    --digest-card-border-radius: 10px;
 
-    --board-card-color-background: var(--color-background);
-    --board-card-color-foreground: var(--color-background-frontmost);
-    --board-card-color-icon: var(--color-placeholder);
+    --digest-card-color-background: var(--color-background);
+    --digest-card-color-foreground: var(--color-background-frontmost);
+    --digest-card-color-icon: var(--color-placeholder);
 }
 
 /*
@@ -18,50 +18,50 @@
 */
 
 .digest-card {
-    background-color: var(--board-card-color-background);
-    outline: var(--board-card-outline-thickness) solid var(--board-card-color-background);
-    border-radius: var(--board-card-border-radius);
+    background-color: var(--digest-card-color-background);
+    outline: var(--digest-card-outline-thickness) solid var(--digest-card-color-background);
+    border-radius: var(--digest-card-border-radius);
 
     overflow: clip;
 }
 .digest-card > .icon {
-    background-color: var(--board-card-color-icon);
-    border-radius: var(--board-card-border-radius);
-    width: var(--board-card-icon-size);
-    height: var(--board-card-icon-size);
+    background-color: var(--digest-card-color-icon);
+    border-radius: var(--digest-card-border-radius);
+    width: var(--digest-card-icon-size);
+    height: var(--digest-card-icon-size);
     margin-right: var(--padding-small);
 
     float: left;
 }
 .digest-card > .header {
-    background-color: var(--board-card-color-background);
+    background-color: var(--digest-card-color-background);
     font-size: var(--font-size-title-small);
     font-weight: 600;
 
     padding-top: var(--padding-small);
     padding-right: var(--padding-small);
     padding-bottom: var(--padding-small);
-    min-height: var(--board-card-header-height);
+    min-height: var(--digest-card-header-height);
 
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 .digest-card > .body {
-    background-color: var(--board-card-color-foreground);
+    background-color: var(--digest-card-color-foreground);
     color: var(--color-text-faint);
     font-style: italic;
 
     padding: var(--padding-small);
     padding-top: var(--padding-tiny);
-    min-height: calc(var(--board-card-icon-size) - var(--board-card-header-height));
+    min-height: calc(var(--digest-card-icon-size) - var(--digest-card-header-height));
 }
 
 /* Other versions */
 
 .digest-card.one-color > .body {
     color: unset;
-    background-color: var(--board-card-color-background);
+    background-color: var(--digest-card-color-background);
 }
 
 .digest-card.inline-icon > .body {
