@@ -2,15 +2,15 @@
     --digest-card-icon-size: 75px;
     --digest-card-header-height: 40px;
     --digest-card-outline-thickness: 4px;
-    --digest-card-border-radius: 10px;
+    --digest-card-border-radius: var(--border-radius-generic);
 
     --digest-card-color-background: var(--color-background);
     --digest-card-color-foreground: var(--color-background-frontmost);
-    --digest-card-color-icon: var(--color-placeholder);
+    --digest-card-color-icon: #00000000;
 }
 
 /*
-<section class="test">
+<section class="digest-card">
     <div class="icon"></div>
     <section class="header"><h2>Board Title</h2></section>
     <section class="body"><p>Short board summary</p></section>
@@ -47,6 +47,11 @@
     justify-content: flex-start;
     align-items: center;
 }
+.digest-card > .header > * {
+    width: 100%;
+}
+
+/* Optional (but probably always used) text body section */
 .digest-card > .body {
     background-color: var(--digest-card-color-foreground);
     color: var(--color-text-faint);
@@ -57,11 +62,59 @@
     min-height: calc(var(--digest-card-icon-size) - var(--digest-card-header-height));
 }
 
+/* Optional button section for popups */
+.digest-card > .buttons {
+    background-color: var(--digest-card-color-foreground);
+    
+    padding: var(--padding-small);
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: var(--padding-tiny);
+    flex-wrap: wrap;
+
+    clear: left;
+}
+.digest-card > .buttons > button {
+    background-color: var(--digest-card-color-background);
+    font-weight: 500;
+    text-align: center;
+    border-radius: var(--digest-card-border-radius);
+
+    padding: var(--padding-tiny);
+    padding-left: var(--padding-small);
+    padding-right: var(--padding-small);
+    flex-grow: 1;
+
+    position: relative;
+}
+.digest-card > .buttons > button:hover { cursor: pointer; }
+.digest-card > .buttons > button:hover::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: var(--digest-card-border-radius);
+
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
 /* Other versions */
 
 .digest-card.one-color > .body {
     color: unset;
     background-color: var(--digest-card-color-background);
+}
+.digest-card.one-color > .buttons {
+    background-color: var(--digest-card-color-background);
+}
+.digest-card.one-color > .buttons > button {
+    background-color: var(--digest-card-color-foreground);
 }
 
 .digest-card.inline-icon > .body {
@@ -76,4 +129,8 @@
 }
 .digest-card.iconless > .header {
     padding: var(--padding-small);
+}
+
+.digest-card.centered {
+    text-align: center;
 }

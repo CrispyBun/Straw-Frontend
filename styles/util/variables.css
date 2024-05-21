@@ -17,4 +17,7 @@
     /* Font sizes */
     --font-size-title-main: 2em;
     --font-size-title-small: 1.25em;
+
+    /* Misc */
+    --border-radius-generic: 10px;
 }

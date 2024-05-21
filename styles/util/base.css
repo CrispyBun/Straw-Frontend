@@ -4,10 +4,18 @@
 
 * {
     box-sizing: border-box;
+    overflow-wrap: break-word;
 }
 
-* {
-    overflow-wrap: break-word;
+button {
+    /* Reset buttons */
+    background-color: unset;
+    color: unset;
+    font-family: unset;
+    font-size: unset;
+    text-align: unset;
+    border: unset;
+    outline:  unset;
 }
 
 body {
