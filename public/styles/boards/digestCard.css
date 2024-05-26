@@ -6,7 +6,7 @@
 
     --digest-card-color-background: var(--color-background);
     --digest-card-color-foreground: var(--color-background-frontmost);
-    --digest-card-color-icon: #00000000;
+    --digest-card-color-icon: var(--color-placeholder);
 }
 
 /*
@@ -19,14 +19,14 @@
 
 .digest-card {
     background-color: var(--digest-card-color-background);
-    outline: var(--digest-card-outline-thickness) solid var(--digest-card-color-background);
+    border: var(--digest-card-outline-thickness) solid var(--digest-card-color-background);
     border-radius: var(--digest-card-border-radius);
 
     overflow: clip;
 }
 .digest-card > .icon {
     background-color: var(--digest-card-color-icon);
-    border-radius: var(--digest-card-border-radius);
+    border-radius: calc(var(--digest-card-border-radius) - var(--digest-card-outline-thickness));
     width: var(--digest-card-icon-size);
     height: var(--digest-card-icon-size);
     margin-right: var(--padding-small);
