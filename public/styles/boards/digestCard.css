@@ -4,8 +4,10 @@
     --digest-card-outline-thickness: 4px;
     --digest-card-border-radius: var(--border-radius-generic);
 
-    --digest-card-color-background: var(--color-background);
-    --digest-card-color-foreground: var(--color-background-frontmost);
+    --digest-card-color-border: var(--color-background-element);
+    --digest-card-color-body: var(--color-background-backmost);
+    --digest-card-color-text-body: var(--color-text-faint);
+    --digest-card-color-text-header: var(--color-text);
     --digest-card-color-icon: var(--color-placeholder);
 }
 
@@ -18,8 +20,8 @@
 */
 
 .digest-card {
-    background-color: var(--digest-card-color-background);
-    border: var(--digest-card-outline-thickness) solid var(--digest-card-color-background);
+    background-color: var(--digest-card-color-border);
+    border: var(--digest-card-outline-thickness) solid var(--digest-card-color-border);
     border-radius: var(--digest-card-border-radius);
 
     overflow: clip;
@@ -34,7 +36,8 @@
     float: left;
 }
 .digest-card > .header {
-    background-color: var(--digest-card-color-background);
+    background-color: var(--digest-card-color-border);
+    color: var(--digest-card-color-text-header);
     font-size: var(--font-size-title-small);
     font-weight: 600;
 
@@ -53,8 +56,8 @@
 
 /* Optional (but probably always used) text body section */
 .digest-card > .body {
-    background-color: var(--digest-card-color-foreground);
-    color: var(--color-text-faint);
+    background-color: var(--digest-card-color-body);
+    color: var(--digest-card-color-text-body);
     font-style: italic;
 
     padding: var(--padding-small);
@@ -64,7 +67,7 @@
 
 /* Optional button section for popups */
 .digest-card > .buttons {
-    background-color: var(--digest-card-color-foreground);
+    background-color: var(--digest-card-color-body);
     
     padding: var(--padding-small);
 
@@ -78,7 +81,7 @@
     clear: left;
 }
 .digest-card > .buttons > button {
-    background-color: var(--digest-card-color-background);
+    background-color: var(--digest-card-color-border);
     font-weight: 500;
     text-align: center;
     border-radius: var(--digest-card-border-radius);
@@ -108,13 +111,13 @@
 
 .digest-card.one-color > .body {
     color: unset;
-    background-color: var(--digest-card-color-background);
+    background-color: var(--digest-card-color-border);
 }
 .digest-card.one-color > .buttons {
-    background-color: var(--digest-card-color-background);
+    background-color: var(--digest-card-color-border);
 }
 .digest-card.one-color > .buttons > button {
-    background-color: var(--digest-card-color-foreground);
+    background-color: var(--digest-card-color-body);
 }
 
 .digest-card.inline-icon > .body {
