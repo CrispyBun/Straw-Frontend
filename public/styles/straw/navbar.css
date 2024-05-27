@@ -1,0 +1,45 @@
+.navbar {
+    background-color: var(--color-background-element);
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    /* box-shadow: 0 0 10px 0 #00000050;*/ 
+
+    height: 100vh;
+    
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-medium);
+    gap: var(--gap-medium);
+
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.navbar > .logo {
+    width: 50px;
+    border-radius: 50%;
+}
+.navbar > .spacer-line {
+    background-color: #ffffff;
+    height: 4px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.navbar > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000025;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}
+.navbar > a:hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000050;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+}

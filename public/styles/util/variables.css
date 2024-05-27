@@ -9,6 +9,7 @@
     /* Sizing */
     --padding-tiny: 5px;
     --padding-small: 10px;
+    --padding-medium: 20px;
     --gap-tiny: 10px;
     --gap-small: 20px;
     --gap-medium: 30px;
@@ -19,4 +20,5 @@
 
     /* Misc */
     --border-radius-generic: 10px;
+    --border-radius-large: 20px;
 }
