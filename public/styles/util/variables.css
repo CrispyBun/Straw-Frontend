@@ -3,6 +3,7 @@
     --color-background-backmost: #e1cee6;
     --color-background-element: #c9a3d8;
     --color-placeholder: #c375d3;
+    --color-text-light: #ffffff;
     --color-text: #131313;
     --color-text-faint: #4b4b4b;
 
@@ -21,4 +22,5 @@
     /* Misc */
     --border-radius-generic: 10px;
     --border-radius-large: 20px;
+    --box-shadow-generic: 0 0 10px 0 #00000050;
 }

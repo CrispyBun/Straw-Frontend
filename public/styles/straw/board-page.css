@@ -1,0 +1,16 @@
+.board-top {
+    background-color: var(--color-background-element);
+    box-shadow: var(--box-shadow-generic);
+    min-height: 200px;
+    align-self: stretch;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.board-top > h1 {
+    color: var(--color-text-light);
+    font-weight: bold;
+    margin: var(--padding-medium);
+}

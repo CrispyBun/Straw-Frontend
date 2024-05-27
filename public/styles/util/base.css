@@ -7,8 +7,8 @@
     overflow-wrap: break-word;
 }
 
+/* Reset buttons */
 button {
-    /* Reset buttons */
     background-color: unset;
     color: unset;
     font-family: unset;
@@ -16,6 +16,15 @@ button {
     text-align: unset;
     border: unset;
     outline:  unset;
+}
+
+/* Reset input */
+input {
+    color: unset;
+    background-color: unset;
+    border: unset;
+    font-family: unset;
+    outline: unset;
 }
 
 body {

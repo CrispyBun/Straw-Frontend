@@ -1,7 +1,9 @@
 @import '../util/base.css';
-@import 'digestCard.css';
-@import 'boardList.css';
+@import 'digest-card.css';
+@import 'board-list.css';
+@import 'board-page.css';
 @import 'navbar.css';
+@import 'containers.css';
 
 h1 {
     font-size: var(--font-size-title-main);

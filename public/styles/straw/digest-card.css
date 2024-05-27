@@ -107,6 +107,38 @@
     top: 0;
 }
 
+/* Optional inputs section */
+.digest-card > .inputs {
+    background-color: var(--digest-card-color-body);
+    
+    padding: var(--padding-medium);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: var(--padding-tiny);
+    flex-wrap: wrap;
+
+    clear: left;
+}
+.digest-card > .inputs > input {
+    background-color: var(--digest-card-color-border);
+    font-weight: 500;
+    text-align: center;
+    border-radius: var(--digest-card-border-radius);
+
+    padding: var(--padding-tiny);
+    padding-left: var(--padding-small);
+    padding-right: var(--padding-small);
+    flex-grow: 1;
+
+    position: relative;
+}
+.digest-card > .inputs > label:not(:first-child) {
+    margin-top: var(--gap-tiny);
+}
+
 /* Other versions */
 
 .digest-card.one-color > .body {
@@ -117,6 +149,12 @@
     background-color: var(--digest-card-color-border);
 }
 .digest-card.one-color > .buttons > button {
+    background-color: var(--digest-card-color-body);
+}
+.digest-card.one-color > .inputs {
+    background-color: var(--digest-card-color-border);
+}
+.digest-card.one-color > .inputs > input {
     background-color: var(--digest-card-color-body);
 }
 
@@ -136,4 +174,8 @@
 
 .digest-card.centered {
     text-align: center;
+}
+
+.digest-card.thick-outline {
+    --digest-card-outline-thickness: 25px;
 }

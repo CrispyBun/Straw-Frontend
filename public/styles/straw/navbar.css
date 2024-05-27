@@ -3,6 +3,7 @@
     border-top-right-radius: 40px;
     border-bottom-right-radius: 40px;
     /* box-shadow: 0 0 10px 0 #00000050;*/ 
+    box-shadow: var(--box-shadow-generic);
 
     height: 100vh;
     
@@ -26,8 +27,11 @@
     border-radius: 2px;
     flex-shrink: 0;
 }
+.navbar > .spacer-grow {
+    flex-grow: 1;
+}
 
-.navbar > a {
+.navbar > a, .navbar > button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,11 +39,12 @@
     aspect-ratio: 1/1;
     border-radius: 50%;
 }
-.navbar > a:hover {
+.navbar > a:hover, .navbar > button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #00000050;
     aspect-ratio: 1/1;
     border-radius: 50%;
+    cursor: pointer;
 }
