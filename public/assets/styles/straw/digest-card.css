@@ -179,3 +179,12 @@
 .digest-card.thick-outline {
     --digest-card-outline-thickness: 25px;
 }
+
+.digest-card > .body.centered {
+    padding: var(--padding-small);
+}
+
+.digest-card > .body.highlighted {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius-generic);
+}

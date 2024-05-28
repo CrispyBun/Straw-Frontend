@@ -21,7 +21,11 @@
 
     <main class="container-fullpage-centered">
         <form novalidate class="digest-card iconless one-color thick-outline centered" id="registration">
+            
             <section class="header"><h1>Create an account</h1></section>
+
+            <section cloak class="body centered highlighted" id="error-popup"><p>Unknown error</p></section>
+
             <section class="inputs">
                 <label for="username">Username</label>
                 <input required type="text" name="username" id="username">
@@ -33,6 +37,7 @@
             <section class="body">
                 <p>By creating an account you agree with our<br><a href="/terms">Terms of Service</a> and <a href="/privacy-policy">Privacy Policy</a>.</p>
             </section>
+            
             <section class="buttons">
                 <button type="submit">Register</button>
             </section>
@@ -42,6 +47,6 @@
         </form>
     </main>
 
-    <script type="module" src="/assets/scripts/registerPage.js"></script>
+    <script type="module" src="/assets/scripts/registerForm.js"></script>
 </body>
 </html>

@@ -27,6 +27,10 @@ input {
     outline: unset;
 }
 
+*[cloak] {
+    display: none;
+}
+
 body {
     color: var(--color-text);
     background-color: var(--color-background-backmost);
