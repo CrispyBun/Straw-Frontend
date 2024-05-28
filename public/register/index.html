@@ -20,7 +20,7 @@
     </nav>
 
     <main class="container-fullpage-centered">
-        <form novalidate class="digest-card iconless one-color thick-outline centered" id="registration">
+        <form novalidate class="digest-card iconless one-color thick-outline centered fixed-width" id="registration">
             
             <section class="header"><h1>Create an account</h1></section>
 
@@ -28,11 +28,11 @@
 
             <section class="inputs">
                 <label for="username">Username</label>
-                <input required type="text" name="username" id="username">
+                <input required pattern="^[a-zA-Z0-9_]*$" title="a username consisting of alphanumeric characters and underscores" type="text" name="username" id="username">
                 <label for="email">Email</label>
                 <input required type="email" name="email" id="email">
                 <label for="password">Password</label>
-                <input required type="password" name="password" id="password">
+                <input required minlength="8" type="password" name="password" id="password">
             </section>
             <section class="body">
                 <p>By creating an account you agree with our<br><a href="/terms">Terms of Service</a> and <a href="/privacy-policy">Privacy Policy</a>.</p>

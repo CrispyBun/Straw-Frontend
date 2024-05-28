@@ -16,12 +16,18 @@ form.addEventListener("submit", async (e) => {
     const email = formFields.email;
     const password = formFields.password;
 
+    if (formFields.error !== null) {
+        errorElement.style.display = "block";
+        errorElement.innerHTML = `<p>${formFields.error}</p>`
+        return;
+    }
+
     const res = await registerUser(username, email, password);
     if (!res.success) {
         errorElement.style.display = "block";
         errorElement.innerHTML = `<p>${res.error}</p>`
+        return;
     }
-    else {
-        window.location.replace("/login");
-    }
+
+    window.location.replace("/login");
 });

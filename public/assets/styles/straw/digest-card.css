@@ -180,6 +180,10 @@
     --digest-card-outline-thickness: 25px;
 }
 
+.digest-card.fixed-width {
+    width: 400px;
+}
+
 .digest-card > .body.centered {
     padding: var(--padding-small);
 }
