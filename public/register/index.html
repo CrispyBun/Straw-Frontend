@@ -5,41 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="/styles/straw/main.css">
+    <link rel="stylesheet" href="/assets/styles/straw/main.css">
 </head>
 <body>
     <nav class="navbar">
         <img class="logo" src="https://media.discordapp.net/attachments/935989994735169546/1244270826677600277/image0.gif?ex=6655d282&is=66548102&hm=e67e65e644295a5a77e5a8def5c0ed1959148186c9a3d62e0b540a44d1be4653&=&width=480&height=480" alt="Logo">
         <div class="spacer-line"></div>
-        <a href=""><img src="/img/icon/profile.svg" alt="Profile icon"></a>
-        <a href=""><img src="/img/icon/plus.svg" alt="Plus icon"></a>
-        <a href=""><img src="/img/icon/chat-filled.svg" alt="Home icon"></a>
-        <a href=""><img src="/img/icon/home.svg" alt="Home icon"></a>
+        <a href=""><img src="/assets/img/icon/profile.svg" alt="Profile icon"></a>
+        <a href=""><img src="/assets/img/icon/plus.svg" alt="Plus icon"></a>
+        <a href=""><img src="/assets/img/icon/chat-filled.svg" alt="Home icon"></a>
+        <a href=""><img src="/assets/img/icon/home.svg" alt="Home icon"></a>
         <div class="spacer-grow"></div>
-        <button href=""><img src="/img/icon/arrow-left.svg" alt="Back"></button>
+        <button href=""><img src="/assets/img/icon/arrow-left.svg" alt="Back"></button>
     </nav>
 
     <main class="container-fullpage-centered">
-        <article class="digest-card iconless one-color thick-outline centered">
+        <form novalidate class="digest-card iconless one-color thick-outline centered" id="registration">
             <section class="header"><h1>Create an account</h1></section>
-             <section class="inputs">
+            <section class="inputs">
                 <label for="username">Username</label>
-                <input type="text" name="username" id="username">
+                <input required type="text" name="username" id="username">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email">
+                <input required type="email" name="email" id="email">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password">
+                <input required type="password" name="password" id="password">
             </section>
             <section class="body">
                 <p>By creating an account you agree with our<br><a href="/terms">Terms of Service</a> and <a href="/privacy-policy">Privacy Policy</a>.</p>
             </section>
             <section class="buttons">
-                <button>Register</button>
+                <button type="submit">Register</button>
             </section>
             <section class="body">
                 <p>Already have an account? <a href="/login">Login.</a></p>
             </section>
-        </article>
+        </form>
     </main>
+
+    <script type="module" src="/assets/scripts/registerPage.js"></script>
 </body>
 </html>

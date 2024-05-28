@@ -1,7 +1,7 @@
 // Needs a #board-card-template (to be cloned)
 // Needs a .board-list (to put the clones into)
 
-import { getBoards } from './api.js';
+import { getBoards } from '/assets/modules/api.js';
 
 const boardCardTemplate = document.querySelector("#board-card-template");
 const list = document.querySelector(".board-list");
