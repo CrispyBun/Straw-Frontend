@@ -23,6 +23,7 @@ app.get("*", (req, res) => {
     res.send("404 placeholder :-)");
 })
 
-app.listen(5173, () => {
-    console.log("Server is running on port 5173");
+const port = 5173
+app.listen(port, () => {
+    console.log(`Server is running on port http://localhost:${port}`);
 });

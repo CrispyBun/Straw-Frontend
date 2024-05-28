@@ -5,7 +5,7 @@
 @import 'navbar.css';
 @import 'containers.css';
 
-h1 {
+h1.large {
     font-size: var(--font-size-title-main);
     margin-top: var(--padding-small);
     margin-bottom: var(--padding-small);
