@@ -1,7 +1,10 @@
-.board-top {
+.page-head {
     background-color: var(--color-background-element);
     box-shadow: var(--box-shadow-generic);
-    min-height: 200px;
+    border-bottom-left-radius: var(--border-radius-generic);
+    border-bottom-right-radius: var(--border-radius-generic);
+
+
     align-self: stretch;
 
     display: flex;
@@ -9,8 +12,9 @@
     justify-content: center;
 }
 
-.board-top > h1 {
+.page-head > h1 {
     color: var(--color-text-light);
+    font-size: var(--font-size-title-main);
     font-weight: bold;
     margin: var(--padding-medium);
 }
