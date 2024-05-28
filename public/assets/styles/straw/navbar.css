@@ -11,6 +11,10 @@
 </nav>
 */
 
+:root {
+    --navbar-icon-size: 50px;
+}
+
 .navbar {
     background-color: var(--color-background-element);
     border-top-right-radius: 40px;
@@ -30,21 +34,20 @@
     top: 0;
 }
 
-.navbar .profile-picture {
-    width: 50px;
-    border-radius: 50%;
-}
 .navbar > .spacer-line {
     background-color: #ffffff;
     height: 4px;
     border-radius: 2px;
     flex-shrink: 0;
 }
+.navbar.bottom > .spacer-line { height: unset; width: 4px; }
 .navbar > .spacer-grow {
     flex-grow: 1;
 }
 
 .navbar > a, .navbar > button {
+    overflow: clip;
+    width: var(--navbar-icon-size);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -60,4 +63,55 @@
     aspect-ratio: 1/1;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.navbar .profile-picture {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+/* Responsivity */
+
+@media (max-height: 555px), (max-width: 720px) {
+    .navbar {
+        height: unset;
+        top: unset;
+        bottom: 0;
+    
+        border-bottom-right-radius: unset;
+        border-top-left-radius: 40px;
+    
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 0;
+    }
+    .navbar > button#navbar-button-back {
+        display: none;
+    }
+    .navbar > .spacer-grow {
+        display: none;
+    }
+}
+
+/* Duplicate in a class in case it should be forced */
+.navbar.bottom {
+    height: unset;
+    top: unset;
+    bottom: 0;
+
+    border-bottom-right-radius: unset;
+    border-top-left-radius: 40px;
+
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+}
+.navbar.bottom > button#navbar-button-back {
+    display: none;
+}
+.navbar.bottom > .spacer-grow {
+    display: none;
 }
