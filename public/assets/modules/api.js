@@ -35,4 +35,31 @@ const registerUser = async (username, email, password) => {
     }
 }
 
-export { url, getBoards, registerUser }
+const authenticateUser = async (usernameOrEmail, password) => {
+
+    const usernameKey = usernameOrEmail.includes("@") ? "email" : "username";
+
+    const response = await fetch(url + "/authenticate", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            [usernameKey]: usernameOrEmail,
+            password: password
+        })
+    })
+    const data = await response.json();
+
+    if (!response.ok) return {
+        success: false,
+        data: null,
+        error: data.message
+    }
+
+    return {
+        success: true,
+        data: data.data,
+        error: null
+    }
+}
+
+export { url, getBoards, registerUser, authenticateUser }

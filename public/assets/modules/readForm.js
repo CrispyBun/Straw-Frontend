@@ -16,10 +16,12 @@ export default (form) => {
         const patternTitle = (input.title === "" ? "in the correct format" : input.title);
         const value = input.value;
 
-        if (isRequired && value === "") out.error = `"${id}" is required`;
-        if (minLength !== null && value.length < minLength) out.error = `"${id}" must be at least ${minLength} characters long`;
-        if (maxLength !== null && value.length > minLength) out.error = `"${id}" can be a maximum of ${minLength} characters long`;
-        if (pattern !== "" && !(new RegExp(pattern).test(value))) out.error = `"${id}" must be ${patternTitle}`;
+        const idFormatted = id.replaceAll("-", " ");
+
+        if (isRequired && value === "") out.error = `"${idFormatted}" is required`;
+        if (minLength !== null && value.length < minLength) out.error = `"${idFormatted}" must be at least ${minLength} characters long`;
+        if (maxLength !== null && value.length > minLength) out.error = `"${idFormatted}" can be a maximum of ${minLength} characters long`;
+        if (pattern !== "" && !(new RegExp(pattern).test(value))) out.error = `"${idFormatted}" must be ${patternTitle}`;
 
         out[id] = value;
     }

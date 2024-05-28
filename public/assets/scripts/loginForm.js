@@ -1,19 +1,19 @@
-// Needs #username, #email, #password input fields
-// Needs a #registration form, in which all the fields are
-// There needs to be a cloaked a #error-popup element
+// Needs #username-or-email, #password input fields
+// Needs a #login form, in which all the fields are
+// There needs to be a cloaked #error-popup element
 
-import { registerUser } from '../modules/api.js';
+import { authenticateUser } from '../modules/api.js';
+import { login } from '../modules/user.js';
 import readForm from '../modules/readForm.js';
 
-const form = document.querySelector("form#registration");
+const form = document.querySelector("form#login");
 const errorElement = document.querySelector("#error-popup");
 
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const formFields = readForm(form);
-    const username = formFields.username;
-    const email = formFields.email;
+    const usernameOrEmail = formFields["username-or-email"];
     const password = formFields.password;
 
     if (formFields.error !== null) {
@@ -22,12 +22,14 @@ form.addEventListener("submit", async (e) => {
         return;
     }
 
-    const res = await registerUser(username, email, password);
+    const res = await authenticateUser(usernameOrEmail, password);
     if (!res.success) {
         errorElement.style.display = "block";
         errorElement.innerHTML = `<p>${res.error}</p>`
         return;
     }
 
-    window.location.replace("/login");
+    login(res.data.token);
+
+    window.location.replace("/");
 });
