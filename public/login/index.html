@@ -28,7 +28,7 @@
 
              <section class="inputs">
                 <label for="username-or-email">Username or email</label>
-                <input required type="text" name="username" id="username-or-email">
+                <input required pattern="^[a-zA-Z0-9_]*$" title="a username consisting of alphanumeric characters and underscores" type="text" name="username" id="username-or-email">
                 <label for="password">Password</label>
                 <input required type="password" name="password" id="password">
             </section>

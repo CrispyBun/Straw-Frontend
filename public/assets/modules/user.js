@@ -1,5 +1,6 @@
 const decodeToken = (token) => {
-    const sections = token.split(".");
+    const rawToken = token.substring(7);
+    const sections = rawToken.split(".");
     const body = JSON.parse(atob(sections[1]));
 
     const userId = body.userId;
