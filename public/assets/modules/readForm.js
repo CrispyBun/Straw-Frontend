@@ -13,15 +13,21 @@ export default (form) => {
         const minLength = input.getAttribute("minlength");
         const maxLength = input.getAttribute("maxlength");;
         const pattern = input.pattern;
+        const match = input.getAttribute("match");
+
         const patternTitle = (input.title === "" ? "in the correct format" : input.title);
         const value = input.value;
-
         const idFormatted = id.replaceAll("-", " ");
 
         if (isRequired && value === "") out.error = `"${idFormatted}" is required`;
         if (minLength !== null && value.length < minLength) out.error = `"${idFormatted}" must be at least ${minLength} characters long`;
         if (maxLength !== null && value.length > minLength) out.error = `"${idFormatted}" can be a maximum of ${minLength} characters long`;
         if (pattern !== "" && !(new RegExp(pattern).test(value))) out.error = `"${idFormatted}" must be ${patternTitle}`;
+
+        if (match !== undefined) {
+            const matchingInput = [...inputs].find((value) => value.id === match);
+            if (matchingInput && matchingInput.value !== value) out.error = `"${idFormatted}" does not match`;
+        }
 
         out[id] = value;
     }
