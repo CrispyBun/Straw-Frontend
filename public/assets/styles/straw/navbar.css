@@ -32,6 +32,15 @@
     position: fixed;
     left: 0;
     top: 0;
+
+    z-index: 100;
+
+    transition: 1s;
+}
+.navbar > button#navbar-button-back {
+    position: relative;
+    left: 0;
+    transition: 1s;
 }
 
 .navbar > .spacer-line {
@@ -78,6 +87,7 @@
         height: unset;
         top: unset;
         bottom: 0;
+        left: 0 !important;
     
         border-bottom-right-radius: unset;
         border-top-left-radius: 40px;
@@ -100,6 +110,7 @@
     height: unset;
     top: unset;
     bottom: 0;
+    left: 0 !important;
 
     border-bottom-right-radius: unset;
     border-top-left-radius: 40px;
