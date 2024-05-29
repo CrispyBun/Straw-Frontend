@@ -1,0 +1,35 @@
+.card {
+    background-color: var(--color-background-element);
+    border-radius: var(--border-radius-generic);
+
+    padding: var(--padding-medium);
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: var(--gap-tiny);
+}
+
+.card > h2 {
+    font-size: var(--font-size-title-small);
+    font-weight: 600;
+}
+
+.card > .row {
+    background-color: var(--color-lighten);
+    border-radius: var(--border-radius-generic);
+
+    align-self: stretch;
+    padding: var(--padding-small);
+    margin-top: var(--padding-tiny);
+    margin-bottom: var(--padding-tiny);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.card .bold {
+    font-weight: bold;
+}

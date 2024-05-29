@@ -4,6 +4,8 @@
 @import 'page-head.css';
 @import 'navbar.css';
 @import 'containers.css';
+@import 'block.css';
+@import 'button.css';
 
 h1.large {
     font-size: var(--font-size-title-main);

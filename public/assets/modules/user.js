@@ -37,4 +37,16 @@ const isLoggedIn = () => {
     return true;
 }
 
-export { login, logout, isLoggedIn }
+const getId = () => {
+    const token = localStorage.getItem("token");
+    if (!token) return -1;
+
+    const tokenData = decodeToken(token);
+    return tokenData.userId;
+}
+
+const getToken = () => {
+    return localStorage.getItem("token");
+}
+
+export { login, logout, isLoggedIn, getId, getToken }

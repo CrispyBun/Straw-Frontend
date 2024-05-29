@@ -149,13 +149,13 @@
     background-color: var(--digest-card-color-border);
 }
 .digest-card.one-color > .buttons > button {
-    background-color: var(--digest-card-color-body);
+    background-color: var(--color-lighten);
 }
 .digest-card.one-color > .inputs {
     background-color: var(--digest-card-color-border);
 }
 .digest-card.one-color > .inputs > input {
-    background-color: var(--digest-card-color-body);
+    background-color: var(--color-lighten);
 }
 
 .digest-card.inline-icon > .body {

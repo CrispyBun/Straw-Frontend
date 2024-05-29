@@ -10,6 +10,20 @@ const getBoards = async (skip = 0, limit = 10) => {
     return boardResponse.data;
 }
 
+const getUser = async (id, token) => {
+    const reqHeaders = {};
+    if (token) {
+        reqHeaders["X-Auth"] = token;
+    }
+
+    const response = await fetch(url + `/user/${id}`, {
+        method: "GET",
+        headers: reqHeaders
+    });
+    const data = await response.json();
+    return data.data;
+}
+
 const registerUser = async (username, email, password) => {
     const response = await fetch(url + "/user", {
         method: "POST",
@@ -62,4 +76,4 @@ const authenticateUser = async (usernameOrEmail, password) => {
     }
 }
 
-export { url, getBoards, registerUser, authenticateUser }
+export { url, getBoards, registerUser, authenticateUser, getUser }

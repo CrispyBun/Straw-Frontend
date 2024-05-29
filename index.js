@@ -17,6 +17,7 @@ app.use(helmet({
 }));
 
 app.use(express.static("public"));
+app.use("/board/:id", express.static("public/board/id"));
 
 app.get("*", (req, res) => {
     res.status(404);
