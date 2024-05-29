@@ -25,5 +25,5 @@ app.get("*", (req, res) => {
 
 const port = 5173
 app.listen(port, () => {
-    console.log(`Server is running on port http://localhost:${port}`);
+    console.log(`Server is running port http://localhost:${port}/`);
 });

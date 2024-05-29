@@ -1,9 +1,8 @@
 .page-head {
     background-color: var(--color-background-element);
-    box-shadow: var(--box-shadow-generic);
+    /* box-shadow: var(--box-shadow-generic); */
     border-bottom-left-radius: var(--border-radius-generic);
     border-bottom-right-radius: var(--border-radius-generic);
-
 
     align-self: stretch;
 
