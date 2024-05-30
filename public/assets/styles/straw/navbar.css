@@ -103,6 +103,11 @@
     .navbar > .spacer-grow {
         display: none;
     }
+
+    /* Make sure the navbar doesn't cover anything */
+    body {
+        padding-bottom: 100px;
+    }
 }
 
 /* Duplicate in a class in case it should be forced */
