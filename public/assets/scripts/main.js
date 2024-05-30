@@ -1,3 +1,6 @@
+// To be loaded on every page,
+// takes care of elements that will be on 90% of pages
+
 import { isLoggedIn } from "../modules/user.js";
 
 const navbarLinkAccount = document.querySelector("#navbar-link-account");
@@ -6,6 +9,7 @@ const navbarLinkPost = document.querySelector("#navbar-link-post");
 const navbarLinkChat = document.querySelector("#navbar-link-chat");
 
 // Toggle navbar links based on login
+
 if (!isLoggedIn()) {
     if (navbarLinkProfile) navbarLinkProfile.style.display = "none";
     if (navbarLinkPost) navbarLinkPost.style.display = "none";
