@@ -1,7 +1,7 @@
 // Needs a .board-list (to put the clones into)
 
 import { getBoards } from '../modules/api.js';
-import newBoardCard from '../elements/board-card.js';
+import newBoardCard from '../components/board-card.js';
 
 const list = document.querySelector(".board-list");
 
