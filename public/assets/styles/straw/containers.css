@@ -15,7 +15,7 @@
     align-items: center;
     gap: var(--page-flow-container-gap);
 
-    container-type: size;
+    container-type: inline-size;
     container-name: page-flow;
 }
 
