@@ -1,9 +1,9 @@
-.card {
+.block {
     background-color: var(--color-background-element);
     border-radius: var(--border-radius-generic);
 
     padding: var(--padding-medium);
-    width: 50%;
+    min-width: 50%;
 
     display: flex;
     flex-direction: column;
@@ -12,12 +12,12 @@
     gap: var(--gap-tiny);
 }
 
-.card > h2 {
+.block > h2 {
     font-size: var(--font-size-title-small);
     font-weight: 600;
 }
 
-.card > .row {
+.block > .row {
     background-color: var(--color-lighten);
     border-radius: var(--border-radius-generic);
 
@@ -28,8 +28,22 @@
 
     display: flex;
     justify-content: space-between;
+    gap: var(--gap-tiny);
 }
 
-.card .bold {
+.block .bold {
     font-weight: bold;
+}
+
+@container (max-width: 1000px) {
+    .block {
+        min-width: unset;
+        align-self: stretch;
+    }
+}
+
+@container (max-width: 500px) {
+    .block > .row {
+        flex-direction: column;
+    }
 }

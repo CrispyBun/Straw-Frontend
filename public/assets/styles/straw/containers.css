@@ -1,5 +1,5 @@
 :root {
-    --page-flow-container-margin: 150px;
+    --page-flow-container-margin: 100px;
     --page-flow-container-gap: var(--gap-medium);
 }
 
@@ -14,6 +14,9 @@
     justify-content: flex-start;
     align-items: center;
     gap: var(--page-flow-container-gap);
+
+    container-type: size;
+    container-name: page-flow;
 }
 
 .container-fullpage-centered {
@@ -25,8 +28,9 @@
     align-items: center;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 720px) {
     .page-flow {
-        margin: 0;
+        margin-left: var(--padding-small);
+        margin-right: var(--padding-small);
     }
 }
