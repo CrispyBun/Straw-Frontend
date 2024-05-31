@@ -1,6 +1,6 @@
 // Needs a #username and #email element
 
-import { isLoggedIn, getId, getToken } from "../modules/user.js";
+import { isLoggedIn, getId, getToken, logout } from "../modules/user.js";
 import { getUser } from "../modules/api.js";
 
 if (!isLoggedIn()) {
@@ -11,7 +11,12 @@ else {
     const emailElement = document.querySelector("#email");
 
     const userData = await getUser(getId(), getToken());
-
-    usernameElement.textContent = userData.username;
-    emailElement.textContent = userData.email;
+    if (userData) {
+        usernameElement.textContent = userData.username;
+        emailElement.textContent = userData.email;
+    }
+    else {
+        logout();
+        window.location.replace("/login");
+    }
 }
