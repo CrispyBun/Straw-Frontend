@@ -11,8 +11,14 @@
     align-items: center;
     gap: var(--gap-tiny);
 }
+.block.invisible {
+    background-color: unset;
+}
+.block.narrow {
+    min-width: 40%;
+}
 
-.block > h2 {
+.block > h2, .block > .heading {
     font-size: var(--font-size-title-small);
     font-weight: 600;
 }
@@ -36,7 +42,7 @@
 }
 
 @container (max-width: 1000px) {
-    .block {
+    .block:not(.narrow) {
         min-width: unset;
         align-self: stretch;
     }

@@ -1,9 +1,0 @@
-/* For listing board cards */
-/* Just lays the cards out, should be put into a proper container */
-.board-list {
-    width: 300px; /* TODO: Delete width when this gets a container lol */
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: var(--gap-medium);
-}

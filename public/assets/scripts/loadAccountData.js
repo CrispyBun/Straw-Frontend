@@ -10,7 +10,7 @@ else {
     const usernameElement = document.querySelector("#username");
     const emailElement = document.querySelector("#email");
 
-    const userData = await getUser(getId(), getToken());
+    const userData = (await getUser(getId(), getToken())).data;
     if (userData) {
         usernameElement.textContent = userData.username;
         emailElement.textContent = userData.email;

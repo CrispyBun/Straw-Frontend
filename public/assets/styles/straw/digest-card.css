@@ -139,6 +139,16 @@
     margin-top: var(--gap-tiny);
 }
 
+/* Links */
+a.digest-card {
+    text-decoration: none;
+    transition: box-shadow 0.5s;
+}
+a.digest-card:hover {
+    cursor: pointer;
+    box-shadow: var(--box-shadow-generic);
+}
+
 /* Other versions */
 
 .digest-card.one-color > .body {
