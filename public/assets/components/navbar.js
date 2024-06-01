@@ -27,7 +27,7 @@ const postButtonCallback = (e) => {
     document.querySelector("#text-content").focus()
 }
 
-const openNavbar = (navbar, navbarButton, skipAnimation) => {
+const closeNavbar = (navbar, navbarButton, skipAnimation) => {
     if (skipAnimation) {
         navbar.style.transition = "none";
         navbarButton.style.transition = "none";
@@ -38,7 +38,7 @@ const openNavbar = (navbar, navbarButton, skipAnimation) => {
     navbarButton.style.transform = "rotate(180deg)";
 }
 
-const closeNavbar = (navbar, navbarButton, skipAnimation) => {
+const openNavbar = (navbar, navbarButton, skipAnimation) => {
     if (skipAnimation) {
         navbar.style.transition = "none";
         navbarButton.style.transition = "none";
