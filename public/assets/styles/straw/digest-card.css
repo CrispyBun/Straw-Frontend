@@ -122,7 +122,7 @@
 
     clear: left;
 }
-.digest-card > .inputs > input {
+.digest-card > .inputs > input, .digest-card > .inputs > textarea {
     background-color: var(--digest-card-color-border);
     font-weight: 500;
     text-align: center;
@@ -137,6 +137,12 @@
 }
 .digest-card > .inputs > label:not(:first-child) {
     margin-top: var(--gap-tiny);
+}
+.digest-card > .inputs > textarea {
+    text-align: left;
+    padding: var(--padding-small);
+    height: 150px;
+    width: 100%;
 }
 
 /* Links */
@@ -164,7 +170,7 @@ a.digest-card:hover {
 .digest-card.one-color > .inputs {
     background-color: var(--digest-card-color-border);
 }
-.digest-card.one-color > .inputs > input {
+.digest-card.one-color > .inputs > input, .digest-card.one-color > .inputs > textarea {
     background-color: var(--color-lighten);
 }
 
@@ -201,4 +207,8 @@ a.digest-card:hover {
 .digest-card > .body.highlighted {
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: var(--border-radius-generic);
+}
+
+.digest-card.shadowed {
+    box-shadow: var(--box-shadow-generic);
 }

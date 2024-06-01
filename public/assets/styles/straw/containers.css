@@ -1,6 +1,8 @@
 :root {
     --page-flow-container-margin: 100px;
     --page-flow-container-gap: var(--gap-medium);
+
+    --container-bottom-margin: 100px; /* Has to take navbar into account */
 }
 
 .page-flow {
@@ -8,7 +10,7 @@
 
     margin-left: var(--page-flow-container-margin);
     margin-right: var(--page-flow-container-margin);
-    margin-bottom: 30px;
+    margin-bottom: var(--container-bottom-margin);
     
     display: flex;
     flex-direction: column;
@@ -24,6 +26,7 @@
     width: 100%;
     min-height: 100vh;
     padding: var(--padding-small);
+    margin-bottom: var(--container-bottom-margin);
 
     display: flex;
     justify-content: center;

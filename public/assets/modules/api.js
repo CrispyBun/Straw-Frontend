@@ -74,4 +74,18 @@ const authenticateUser = async (usernameOrEmail, password) => {
     return await parseResponse(response);
 }
 
-export { url, getBoard, getBoards, registerUser, authenticateUser, getUser }
+const postPost = async (boardId, token, textContent) => {
+    const response = fetch(`${url}/board/${boardId}/post`, {
+        method:"POST",
+        headers: {
+            "Content-Type": "application/json",
+            "X-Auth": token
+        },
+        body: JSON.stringify({
+            textContent: textContent
+        })
+    })
+    return await parseResponse(response);
+}
+
+export { url, getBoard, getBoards, registerUser, authenticateUser, getUser, postPost }

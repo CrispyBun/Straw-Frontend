@@ -1,5 +1,6 @@
-import { getUser } from "../modules/api.js";
+import { getUser, url } from "../modules/api.js";
 import { isLoggedIn, getId } from "../modules/user.js";
+import newPostPopup from "../components/post-popup.js";
 
 const template = document.createElement("template");
 template.innerHTML =
@@ -8,7 +9,7 @@ template.innerHTML =
     <a id="navbar-link-account" href="/account"><img class="profile-picture" src="/assets/img/missing-pfp.png" alt="Profile picture"></a>
     <div class="spacer-line"></div>
     <a id="navbar-link-profile" href=""><img src="/assets/img/icon/profile.svg" alt="Profile icon"></a>
-    <a id="navbar-link-post" href=""><img src="/assets/img/icon/plus.svg" alt="Plus icon"></a>
+    <button id="navbar-link-post" href=""><img src="/assets/img/icon/plus.svg" alt="Plus icon"></button>
     <a id="navbar-link-chat" href=""><img src="/assets/img/icon/chat-filled.svg" alt="Home icon"></a>
     <a id="navbar-link-home" href="/"><img src="/assets/img/icon/home.svg" alt="Home icon"></a>
     <div class="spacer-grow"></div>
@@ -19,6 +20,10 @@ template.innerHTML =
 const updateProfileLink = async (profileLinkElement) => {
     const res = await getUser(getId());
     profileLinkElement.href = "/user/" + res.data.url;
+}
+
+const postButtonCallback = (e) => {
+    document.querySelector("body").appendChild(newPostPopup());
 }
 
 const openNavbar = (navbar, navbarButton, skipAnimation) => {
@@ -62,6 +67,14 @@ export default () => {
     }
     else {
         updateProfileLink(navbarLinkProfile);
+        navbarLinkPost.addEventListener("click", postButtonCallback);
+    }
+
+    // Toggle navbar links based on location
+
+    const urlParts = window.location.pathname.split("/");
+    if (!(urlParts[1] === "board" && urlParts[2] !== undefined)) {
+        if (navbarLinkPost) navbarLinkPost.style.display = "none";
     }
 
     // Navbar hide button functionality

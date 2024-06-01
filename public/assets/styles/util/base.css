@@ -15,16 +15,17 @@ button {
     font-size: unset;
     text-align: unset;
     border: unset;
-    outline:  unset;
 }
 
 /* Reset input */
-input {
+input, textarea {
     color: unset;
     background-color: unset;
     border: unset;
     font-family: unset;
     outline: unset;
+
+    resize: none;
 }
 
 *[cloak] {
