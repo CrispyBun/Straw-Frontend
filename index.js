@@ -1,6 +1,12 @@
 import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
+import path from 'path';
+
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 
 const app = express();
 
@@ -21,8 +27,8 @@ app.use("/board/:id", express.static("public/board/id"));
 
 app.get("*", (req, res) => {
     res.status(404);
-    res.send("404 placeholder :-)");
-})
+    res.sendFile("public/404.html", {root: __dirname});
+});
 
 const port = 5173
 app.listen(port, () => {
