@@ -21,6 +21,7 @@ template.innerHTML =
 const makePost = async (text) => {
     const boardUrl = window.location.pathname.split("/")[2];
     await postPost("url-" + boardUrl, getToken(), text);
+    window.location.reload();
 }
 
 export default () => {

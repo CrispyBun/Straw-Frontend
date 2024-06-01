@@ -24,6 +24,7 @@ const updateProfileLink = async (profileLinkElement) => {
 
 const postButtonCallback = (e) => {
     document.querySelector("body").appendChild(newPostPopup());
+    document.querySelector("#text-content").focus()
 }
 
 const openNavbar = (navbar, navbarButton, skipAnimation) => {

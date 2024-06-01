@@ -75,7 +75,7 @@ const authenticateUser = async (usernameOrEmail, password) => {
 }
 
 const postPost = async (boardId, token, textContent) => {
-    const response = fetch(`${url}/board/${boardId}/post`, {
+    const response = await fetch(`${url}/board/${boardId}/post`, {
         method:"POST",
         headers: {
             "Content-Type": "application/json",
@@ -88,4 +88,13 @@ const postPost = async (boardId, token, textContent) => {
     return await parseResponse(response);
 }
 
-export { url, getBoard, getBoards, registerUser, authenticateUser, getUser, postPost }
+const getPosts = async (boardId, skip = 0, limit = 50) => {
+    const postsUrl = `${url}/board/${boardId}/post?`;
+    const response = await fetch(postsUrl + new URLSearchParams({
+        skip: skip,
+        limit: limit
+    }));
+    return await parseResponse(response);
+}
+
+export { url, getBoard, getBoards, registerUser, authenticateUser, getUser, postPost, getPosts }
