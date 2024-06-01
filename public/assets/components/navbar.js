@@ -1,4 +1,5 @@
-import { isLoggedIn } from "../modules/user.js";
+import { getUser } from "../modules/api.js";
+import { isLoggedIn, getId } from "../modules/user.js";
 
 const template = document.createElement("template");
 template.innerHTML =
@@ -14,6 +15,11 @@ template.innerHTML =
     <button id="navbar-button-back"><img src="/assets/img/icon/arrow-left.svg" alt="Back"></button>
 </nav>
 `;
+
+const updateProfileLink = async (profileLinkElement) => {
+    const res = await getUser(getId());
+    profileLinkElement.href = "/user/" + res.data.url;
+}
 
 const openNavbar = (navbar, navbarButton, skipAnimation) => {
     if (skipAnimation) {
@@ -53,6 +59,9 @@ export default () => {
         if (navbarLinkPost) navbarLinkPost.style.display = "none";
         if (navbarLinkChat) navbarLinkChat.style.display = "none";
         if (navbarLinkAccount) navbarLinkAccount.href = "/login";
+    }
+    else {
+        updateProfileLink(navbarLinkProfile);
     }
 
     // Navbar hide button functionality
